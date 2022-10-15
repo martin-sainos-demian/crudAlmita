@@ -178,7 +178,7 @@ const regByName= async function(usu_id, reg_name){
   for(var r in getReg){
     
     console.log("regsjkjkj"+getReg[r].props.reg_name+"  uwu "+reg_name)
-    if(getReg[r].props.reg_name=='"'+reg_name+'"'){
+    if(de(getReg[r].props.reg_name)=='"'+reg_name+'"'){
       resp=getReg[r].key
     }
   }
