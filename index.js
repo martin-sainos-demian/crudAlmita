@@ -188,6 +188,7 @@ const registerPassword=async function(usuId,pass,name){
   var id=await usersEmptyId()
   id=id.toString()
   exists= await regExists(usuId, name)
+  console.log(exists)
   if(exists){
     id=await regByName(usuId, name)
   }
