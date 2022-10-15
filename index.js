@@ -173,7 +173,7 @@ const regExists= async function(usu_id, reg_name){
 
 const regByName= async function(usu_id, reg_name){
   var resp="-1"
-  var getReg= await reg.index("usu_id").find(usu_id)
+  var getReg= await regs.index("usu_id").find(usu_id)
   getReg=getReg.results
   for(var r in getReg){
     if(getReg[r].props.reg_name=='"'+reg_name+'"'){
