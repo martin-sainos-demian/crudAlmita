@@ -37,7 +37,7 @@ app.all("/", function (req, res, next) {
 
 //database
 const CyclicDB = require("cyclic-dynamodb")
-const db = CyclicDB("bewildered-moth-cardiganCyclicDB")
+const db = CyclicDB("cute-rose-angelfish-sockCyclicDB")
 
 const logEverything= async function(){
   var usersFull= await users.list()
