@@ -187,6 +187,9 @@ const registerPassword=async function(usuId,pass,name){
   console.log("registering pass "+name)
   var id=await usersEmptyId()
   id=id.toString()
+  if(await regExists(name)){
+    id=await regByName(name)
+  }
   console.log(id)
   let newReg= await regs.set(id, {
     usu_id:usuId,
