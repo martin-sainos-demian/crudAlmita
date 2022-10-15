@@ -165,7 +165,6 @@ const registersEmptyId=async function(){
 const regExists= async function(usu_id, reg_name){
   var resp=false
   var regGet= await regByName(usu_id,reg_name)
-  console.log("regsjkjkj"+regGet)
   if(regGet!="-1"){
     resp=true
   }
@@ -177,6 +176,8 @@ const regByName= async function(usu_id, reg_name){
   var getReg= await regs.index("usu_id").find(usu_id)
   getReg=getReg.results
   for(var r in getReg){
+    
+    console.log("regsjkjkj"+getReg[r].props.reg_name+"  uwu "+reg_name)
     if(getReg[r].props.reg_name=='"'+reg_name+'"'){
       resp=getReg[r].key
     }
